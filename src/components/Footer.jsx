@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-[#1a3557] text-white pt-12 pb-6 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center text-center md:text-left">
         
         {/* Left: Footer Info & Social */}
         <div className="flex flex-col gap-4">
@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="text-gray-300 text-sm max-w-xs">
             Discover premium tiles for every space. Quality craftsmanship, timeless designs.
           </p>
-          <div className="flex gap-4 mt-2">
+          <div className="flex justify-center md:justify-start gap-4 mt-2">
             <Link href="" target="_blank" aria-label="Facebook">
               <FaFacebook className="text-2xl  transition-colors cursor-pointer" />
             </Link>

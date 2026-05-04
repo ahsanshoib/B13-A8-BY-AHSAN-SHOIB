@@ -35,22 +35,28 @@ export default function MyProfilePage() {
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
             {/* Profile Picture */}
+            
             <div className="flex flex-col items-center gap-2">
               <div className="relative w-28 h-28 rounded-xl overflow-hidden border-2 border-gray-200 bg-gray-100">
-                {user.image ? (
-                  <Image
-                    src={user.image}
-                    alt="Profile Picture"
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-[#1a3557]">
-                    <span className="text-white text-4xl font-bold">
-                      {user.name?.charAt(0).toUpperCase()}
-                    </span>
-                  </div>
-                )}
+               {user.image && !user.image.includes("default") ? (
+  <img
+    src={user.image}
+    alt="Profile Picture"
+    className="w-full h-full object-cover"
+    onError={(e) => {
+      e.target.style.display = "none";
+      e.target.nextSibling.style.display = "flex";
+    }}
+  />
+) : null}
+<div
+  className="w-full h-full flex items-center justify-center bg-[#1a3557]"
+  style={{ display: user.image && !user.image.includes("default") ? "none" : "flex" }}
+>
+  <span className="text-white text-4xl font-bold">
+    {user.name?.charAt(0).toUpperCase()}
+  </span>
+</div>
               </div>
               <p className="text-xs text-gray-500 font-medium">
                 Current Profile Picture

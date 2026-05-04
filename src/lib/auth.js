@@ -16,6 +16,10 @@ export const auth = betterAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         },
     },
+    trustedOrigins: [
+        "http://localhost:3000",
+        "https://b13-a8-by-ahsan-shoib.vercel.app",
+    ],
     user: {
         additionalFields: {
             photoURL: {

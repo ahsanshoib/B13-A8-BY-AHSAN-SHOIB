@@ -62,7 +62,6 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
-
       {/* Right: Auth Buttons */}
       <div className="navbar-end gap-2">
         {isPending ? (
@@ -73,15 +72,25 @@ export default function Navbar() {
             <Link href="/my-profile">
               <div className="avatar cursor-pointer">
                 <div className="w-9 rounded-full ring ring-[#1a3557] ring-offset-1">
-                  {session.user?.image ? (
-                    <img src={session.user.image} alt="Profile" />
-                  ) : (
-                    <div className="w-full h-full bg-[#1a3557] flex items-center justify-center rounded-full">
-                      <span className="text-white text-sm font-bold">
-                        {session.user?.name?.charAt(0).toUpperCase()}
-                      </span>
-                    </div>
-                  )}
+
+                {session.user?.image ? (
+  <img
+    src={session.user.image}
+    alt="Profile"
+    onError={(e) => {
+      e.target.style.display = "none";
+      e.target.nextSibling.style.display = "flex";
+    }}
+  />
+) : null}
+<div
+  className="w-full h-full bg-[#1a3557] flex items-center justify-center rounded-full"
+  style={{ display: session.user?.image ? "none" : "flex" }}
+>
+  <span className="text-white text-sm font-bold">
+    {session.user?.name?.charAt(0).toUpperCase()}
+  </span>
+</div>
                 </div>
               </div>
             </Link>
