@@ -5,6 +5,8 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
+import { authClient } from "@/lib/auth-client";
+import { router } from "better-auth/api";
 
 export default function RegisterPage() {
   const [name, setName] = useState("");
