@@ -8,7 +8,8 @@ const db = client.db("tiles-gallery");
 export const auth = betterAuth({
     database: mongodbAdapter(db, { client }),
     emailAndPassword: {
-        enabled: true
+        enabled: true,
+        autoSignIn: false,
     },
     socialProviders: {
         google: {

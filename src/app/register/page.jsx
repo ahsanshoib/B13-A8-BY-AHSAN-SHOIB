@@ -14,30 +14,40 @@ export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
+const handleRegister = async () => {
+    if (!name || !email || !password) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters.");
+      return;
+    }
+
     setLoading(true);
 
-    try {
-      if (!name || !email || !password) {
-        toast.error("Please fill in all required fields.");
-        return;
-      }
+    const { data, error } = await authClient.signUp.email({
+      email,
+      password,
+      name,
+      image: photoUrl || "",
+    });
 
-      if (password.length < 6) {
-        toast.error("Password must be at least 6 characters.");
-        return;
-      }
-
-      
-      toast.success("Registration successful! Please login.");
-      
-
-    } catch (error) {
-      toast.error("Registration failed. Please try again.");
-    } finally {
+    if (error) {
+      toast.error(error.message || "Registration failed. Please try again.");
       setLoading(false);
+      return;
     }
+
+    if (data) {
+      toast.success("Registration successful! Please login.");
+      setTimeout(() => {
+        router.push("/login");
+      }, 1500);
+    }
+
+    setLoading(false);
   };
 
   const handleGoogleLogin = async () => {
