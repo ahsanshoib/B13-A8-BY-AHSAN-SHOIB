@@ -106,19 +106,19 @@ export default function LoginPage() {
         <div className="text-center">
           <Link
             href="/register"
-            className="text-[#1a3557] font-semibold hover:underline text-sm"
+            className="text-[#142a44] font-semibold hover:underline text-sm"
           >
             Register Now
           </Link>
         </div>
 
         {/* Divider */}
-        <div className="divider text-gray-400 text-xs">Social Login</div>
+        <div className="divider text-gray-500 text-xs">Social Login</div>
 
         {/* Google Login */}
         <button
           onClick={handleGoogleLogin}
-          className="btn w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold flex items-center justify-center gap-3 shadow-sm"
+          className="btn w-full bg-white border border-gray-400 hover:bg-gray-50 text-gray-600 font-semibold flex items-center justify-center gap-3 shadow-sm"
         >
           <FcGoogle className="text-2xl" />
           Google
