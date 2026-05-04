@@ -83,7 +83,7 @@ export default function MyProfilePage() {
           <h2 className="text-2xl font-bold text-gray-800">
             Tile History{" "}
             <span className="text-gray-400 font-normal text-lg">
-              (concept placeholder)
+              
             </span>
           </h2>
 
