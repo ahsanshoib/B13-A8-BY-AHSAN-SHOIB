@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PROJECT NAME : Tiles Gallery
 
-## Getting Started
+### 🌐 Live URL - 
 
-First, run the development server:
+### 📝 Project Purpose :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The purpose of this project is to create a modern and professional website to showcase a variety of tile designs. It allows users to explore different aesthetics, search for specific styles, and manage their personal profiles in a seamless, user-friendly environment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ✨ Key Features :
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ * *Unique Gallery Design:* A beautiful and responsive layout to browse tile collections.
+ * *Secure Authentication:* User Login and Registration (including Google Social Login) powered by BetterAuth.
+ * *Search Functionality:* Quickly find specific tiles using the search bar on the All Tiles page.
+ * *Detailed Information:* View high-resolution images, pricing, material, and dimensions for every tile.
+ * *User Profile Management:* Logged-in users can view their profile and update their name and photo.
+ * *Fully Responsive:* Optimized for a smooth experience on Mobile, Tablet, and Desktop.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📦 NPM Packages Used:
 
-## Learn More
+ * next (React Framework)
+ * better-auth (Authentication)
+ * mongoose (MongoDB Object Modeling)
+ * daisyui (Tailwind CSS Components)
+ * tailwindcss (Styling)
+ * react-hot-toast (Notifications)
+ * lucide-react (Icons)
+ * swiper (Slider/Carousel)
 
-To learn more about Next.js, take a look at the following resources:
+### 🚀 How to Run Locally :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 1. *Clone the repository:* git clone
+ 2. *Install dependencies:* npm install
+ 3. *Setup Environment Variables:* Create a .env.local file with your MongoDB and BetterAuth keys.
+ 4. *Start the server:* npm run dev
