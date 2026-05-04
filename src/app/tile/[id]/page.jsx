@@ -124,7 +124,7 @@ export default function TileDetailsPage({ params }) {
               <div>
                 <span className="font-semibold text-gray-700">Stock:</span>{" "}
                 <span className={tile.inStock ? "text-green-600 font-semibold" : "text-red-500 font-semibold"}>
-                  {tile.inStock ? "In Stock" : "Out of Stock"}
+                  {tile.inStock ? "In Stock" : "Out Of Stock"}
                 </span>
               </div>
             </div>
