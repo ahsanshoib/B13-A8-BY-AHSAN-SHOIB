@@ -8,7 +8,7 @@ export default function Footer() {
         
         {/* Left: Footer Info & Social */}
         <div className="flex flex-col gap-4">
-          <h2 className="text-2xl font-bold">Footer</h2>
+          <h2 className="text-2xl font-bold"></h2>
           <p className="text-gray-300 text-sm max-w-xs">
             Discover premium tiles for every space. Quality craftsmanship, timeless designs.
           </p>
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         {/* Right: Contact Us Form */}
-        <div className="flex flex-col gap-3">
+        {/* <div className="flex flex-col gap-3">
           <h2 className="text-2xl font-bold">Contact Us</h2>
           <input
             type="text"
@@ -51,7 +51,7 @@ export default function Footer() {
               Send
             </button>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
