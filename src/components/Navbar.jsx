@@ -84,7 +84,7 @@ export default function Navbar() {
   />
 ) : null}
 <div
-  className="w-full h-full bg-[#1a3557] flex items-center justify-center rounded-full"
+  className="w-full h-full bg-[#1a3c67] flex items-center justify-center rounded-full"
   style={{ display: session.user?.image ? "none" : "flex" }}
 >
   <span className="text-white text-sm font-bold">
